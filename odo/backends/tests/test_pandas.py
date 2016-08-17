@@ -95,7 +95,7 @@ def test_categorical_pandas():
 
 
 @pytest.mark.skipif(
-    StrictVersion(pd.__version__) < StrictVersion('0.17'),
+    StrictVersion(pd.__version__.split('+')[0]) < StrictVersion('0.17'),
     reason="Pandas before DatetimeTZ",
 )
 def test_datetimetz_pandas():
